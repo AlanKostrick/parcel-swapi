@@ -5,10 +5,11 @@ export default function People(people) {
     ${people.results
       .map(person => {
         return `
-        <li>
-        <h3>${person.name}</h3>
+        <li class='person-info'>
+        <h3 class='person-name'>${person.name}</h3>
         <p>Hair Color: ${person.hair_color}</p>
         <p>Birth Year: ${person.birth_year}</p>
+        <input type='hidden' id='personId' value='${person.url}'>
         </li>
         `;
       })
